@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+     
+    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Rock Paper Scissor</h1>
+        <div class="score-frame">
+            <h1>Player Score: <span id = "playerScore">0</span></h1>
+            <h1>Computer Score: <span id = "computerScore">0</span></h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="left">
+            <div class="frame">
+                <div class="player box rock"><button id="btn">Rock</button></div>
+                <div class="player box paper"><button id="btn">Paper</button></div>
+                <div class="player box scissor"><button id="btn">Scissor</button></div>
+            </div>
+        </section>
+
+        <section class="right">
+            <div class="frame">
+                <div class="enemy box rock"><button id="btnE">Rock</button></div>
+                <div class="enemy box paper"><button id="btnE">Paper</button></div>
+                <div class="enemy box scissor"><button id="btnE">Scissor</button></div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

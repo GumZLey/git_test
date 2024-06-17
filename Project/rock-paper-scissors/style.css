@@ -1,0 +1,126 @@
+/* -- CSS Reset -- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* -- CSS Reset -- */
+
+/* Main */
+
+body {
+    font-family: "Playwrite FR Moderne", cursive, sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    height: 20%;
+}
+
+.score-frame {
+    display: flex;
+    justify-content: space-around;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 4rem;
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 80%;
+    border: 2px solid red;
+    /* justify-content: stretch; */
+}
+
+.left,
+.right {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.frame {
+    width: 500px;
+    height: 80%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.rock {
+    background-color: palegoldenrod;
+}
+
+.paper {
+    background-color: mediumturquoise;
+}
+
+.scissor {
+    background-color: darkmagenta;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.box > #btn, #btnE {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 5rem;
+}
+
