@@ -1,0 +1,88 @@
+:root {
+    --clr-bg: rgb(216, 239, 211);
+    --clr-primary: rgb(85, 173, 155);
+    --clr-secondary: rgb(149, 210, 179);
+    --clr-white: rgb(241, 248, 232);
+}
+
+* {
+    color: var(--clr-primary);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--clr-bg);
+}
+
+.cool-border {
+    border-radius: 1rem;
+    border: 2px solid var(--clr-secondary);
+}
+
+.container {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.main {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.frame {
+    background-color: var(--clr-white);
+    width: 80vw;
+}
+
+ul {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+li {
+    background-color: var(--clr-bg);
+    list-style-type: none;
+    margin: 0.5rem;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    width: auto;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 1rem;
+    border: 2px solid var(--clr-secondary);
+}
+
+#contact {
+    width: 80vw;
+    height: 60vh;
+    font-size: 3rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--clr-secondary);
+    background-color: var(--clr-white);
+    padding: 0.25rem;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 3.65em;
+}
