@@ -1,0 +1,148 @@
+/* -- CSS Reset -- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* -- CSS Reset -- */
+
+:root {
+    --clr-primary-100: rgb(241, 229, 209);
+    --clr-primary-400: rgb(219, 181, 181);
+    --clr-primary-700: rgb(195, 152, 152);
+    --clr-primary-900: rgb(152, 112, 112);
+
+    --clr-secondary-400: hsl(0, 26%, 62%);
+    --clr-secondary-700: hsl(0, 26%, 42%);
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--clr-primary-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 540px;
+    height: 791px;
+    background-color: var(--clr-primary-700);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 54px;
+
+    /* border: 0.25rem solid var(--clr-secondary-700); */
+    box-shadow: var(--clr-secondary-700) 6px 6px;
+}
+
+.result,
+#compute-frame{
+    margin: 1rem;
+    /* padding: 1rem; */
+    width: 497px;
+    background-color: var(--clr-primary-900);
+    border-radius: 44px;
+}
+
+.result {
+    margin-top: 1.5rem;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#result-text {
+    margin-right: 2rem;
+}
+
+#compute-frame {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-frame {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    gap: 2rem;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+
+    border: 2px solid var(--clr-primary-100);
+    border-radius: 10px;
+    background-color: var(--clr-primary-400);
+    box-shadow: var(--clr-secondary-400) 4px 4px;
+}
+
+button:hover {
+    animation: pulseAnimation 1s;
+}
+@keyframes pulseAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+
+
+
+
