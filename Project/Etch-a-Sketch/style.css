@@ -1,0 +1,86 @@
+/* -- CSS Reset -- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* -- CSS Reset -- */
+
+body {
+    font-family: "Playwrite FR Moderne", cursive, sans-serif;
+    background-color: #010030;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    margin: 2rem;
+    width: 1000px;
+    height: 1000px;
+    background-color: transparent;    
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#btn {
+    margin-top: 2rem;
+}
+
+.box-container {
+    display: flex;
+    /* gap: 0.1rem; */
+    max-width: 100%;
+    flex: 1;
+}
+
+.box {
+    flex: 1;
+    /* margin: ; */
+    background-color: black;
+}
