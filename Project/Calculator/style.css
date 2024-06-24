@@ -48,13 +48,13 @@ h6 {
 /* -- CSS Reset -- */
 
 :root {
-    --clr-primary-100: rgb(241, 229, 209);
+    --clr-primary-100: #f1e5d1;
     --clr-primary-400: rgb(219, 181, 181);
     --clr-primary-700: rgb(195, 152, 152);
-    --clr-primary-900: rgb(152, 112, 112);
+    --clr-primary-900: #987070;
 
     --clr-secondary-400: hsl(0, 26%, 62%);
-    --clr-secondary-700: hsl(0, 26%, 42%);
+    --clr-secondary-700: #874f4f;
 }
 
 body {
@@ -64,6 +64,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    /* background: rgb(2,0,36); */
+    background: linear-gradient(135deg, rgba(135,79,79,1) 0%, rgba(152,112,112,1) 20%, rgba(241,229,209,1) 100%);
 }
 
 .container {
@@ -83,7 +85,6 @@ body {
 .result,
 #compute-frame{
     margin: 1rem;
-    /* padding: 1rem; */
     width: 497px;
     background-color: var(--clr-primary-900);
     border-radius: 44px;
@@ -93,11 +94,24 @@ body {
     margin-top: 1.5rem;
     flex: 1;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
 }
 
-#result-text {
+#result-text-prev {
+    align-self: flex-start;
+    margin-left: 2rem;
+    width: 80%;
+    /* background-color: aliceblue; */
+}
+
+#result-text-current {
+    width: 80%;
+    text-align: end;
+    /* background-color: red; */
+    /* background-color: transparent; */
     margin-right: 2rem;
 }
 
