@@ -1,0 +1,292 @@
+/* -- CSS Reset -- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* -- CSS Reset -- */
+
+:root {
+    --clr-green-100: rgb(145, 221, 207);
+    --clr-white-100: rgb(247, 249, 242);
+    --clr-pink-100: rgb(232, 197, 229);
+    --clr-pink-400: rgb(241, 158, 210);
+
+    --clr-black: rgb(0, 0, 0);
+    --clr-white: rgb(255, 255, 255);
+    --clr-light-gray: rgb(244,240,236);
+}
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    background-color: var(--clr-light-gray);
+}
+
+svg {
+    path {
+        fill: var(--clr-white-100);
+    }
+}
+
+.logo > h1 {
+    color: var(--clr-white-100);
+}
+
+.logo {
+    padding-top: 1rem !important;
+}
+
+.side-bar {
+    background-color: var(--clr-green-100);
+    display: grid;
+    grid-template-rows: 100px 300px 1fr;
+    align-items: start;
+}
+
+.main-nav,
+.sub-nav {
+    padding-left: 1.5rem;
+}
+
+nav > div,
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1.5rem;
+}
+
+a {
+    color: var(--clr-white-100);
+    text-decoration-line: none;
+
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    background: var(--clr-pink-100);
+}
+
+a:hover {
+    color: var(--clr-pink-400);
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+.top {
+    height: 175px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: var(--clr-pink-100);
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0.1px 2px 3px var(--clr-pink-400);
+}
+
+.top > * {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.top > div:nth-child(2n){
+    justify-content: flex-end;
+    padding-right: 2rem;
+    gap: 2rem;
+}
+
+input {
+    width: 100%;
+    border: none;
+    background-color: var(--clr-light-gray);
+    border-radius: 1rem;
+    padding-left: 1rem;
+}
+
+.top-btn > * {
+    border: none;
+    border-radius: 1.5rem;
+    color: var(--clr-white-100);
+    background-color: var(--clr-pink-400);
+    padding: 0.5rem 2rem;
+    transition: all 0.3s ease-out;
+}
+
+.top-btn > *:hover {
+    padding: 0.75rem 2.25rem;
+    color: var(--clr-green-100);
+}
+
+.intro-p {
+    font-weight: 700;
+    color: var(--clr-black) !important;
+}   
+
+.content {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "project announcements"
+    "project trending";
+    padding: 1rem;
+    padding-right: 3rem;
+    gap: 2rem;
+    height: calc(100vh - 175px);
+}
+
+.content-project {
+    grid-area: project;
+}
+
+.content-announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
+
+.content-project > .card-container  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    border-radius: 0.75rem;
+    background-color: var(--clr-white);
+    box-shadow: 0px 2px 6px gray;
+}
+
+.card-side-decorate {
+    background-color: var(--clr-pink-400);
+    border-radius: 1.5rem 0 0 1.5rem;
+}
+
+.card > article {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2rem 1.5rem 1rem;
+    height: 225px;
+}
+
+p {
+    color: gray;
+}
+
+.card-icon > svg {
+    path {
+        fill: rgb(63, 63, 63);
+        transition: all 0.2s ease;
+    };
+}
+
+.card-icon {
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-end;
+    justify-self: flex-end;
+    flex: 1;
+
+    gap: 1rem;
+}
+
+.card-icon > svg:hover {
+    path {
+        fill: var(--clr-green-100);
+    }
+}
+
+.announcement-container,
+.trending-card-container {
+    background-color: var(--clr-white);
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    box-shadow: 0px 2px 6px gray;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.trending-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.trending-card {
+    display: flex;
+    gap: 1rem;
+}
+
+.trending-information {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
