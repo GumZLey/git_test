@@ -1,0 +1,164 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* End CSS Reset */
+
+:root {
+    --clr-bg-700: #0A0D17;
+    --clr-secondary-400:  #B2ABF2;
+    --clr-primary-400: #B9929F;
+    --clr-white: #FAF6E4;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--clr-bg-700);
+    color: var(--clr-white);
+    min-height: 100vh;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: "Roboto Slab", serif;
+    font-weight: 900;
+    font-size: 6rem;
+    /* padding: 2rem; */
+}
+
+main {
+    flex: 1;
+}
+
+.display-board {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    /* grid-gap: 4px; */
+    justify-content: center;
+}
+
+.box {
+    border: 2px solid #FAF6E4;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+}
+
+.box:nth-child(1),
+.box:nth-child(2),
+.box:nth-child(3) {
+    border-top: none; 
+}
+
+.box:nth-child(7),
+.box:nth-child(8),
+.box:nth-child(9) {
+    border-bottom: none; 
+}
+
+.box:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.box:nth-child(3n + 3) {
+    border-right: none;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    font-weight: 200;
+    text-decoration: none;
+    color: var(--clr-white);
+    border: 2px dashed var(--clr-secondary-400);
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    transition: all 0.15s ease-in;
+}
+
+a:hover {
+    /* position: fixed; */
+    margin-right: 0.5rem;
+}
+
+#reset-stat {
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+    font-weight: bolder;
+    padding: 1.5rem 4rem;
+    color: var(--clr-white);
+    background-color: transparent;
+    border: 6px solid var(--clr-primary-400);
+    border-radius: 6rem;
+    transition: all 0.15s ease-in;
+}
+
+#reset-stat:hover {
+    background-color: var(--clr-primary-400);
+    color: #0A0D17;
+    cursor: pointer;
+}
